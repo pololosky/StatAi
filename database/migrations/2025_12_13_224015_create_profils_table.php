@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('points_forts');
             $table->string('points_faibles');
             $table->string('Orientation_Recommandée');
-            $table->unsignedBigInteger('User_id');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class minister extends Model
+class Matiere extends Model
 {
     //
 }

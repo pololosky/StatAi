@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('matieres', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('firstName');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->Enum('role', ['admin', 'super_admin'])->default('admin');
+            $table->string('nom');
+            $table->foreignId('categorie_matiere_id')->constrained('categorie_matieres')->onDelete('cascade');
             $table->timestamps();
-
         });
     }
 
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('matieres');
     }
 };
