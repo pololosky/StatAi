@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ministers', function (Blueprint $table) {
-           $table->id();
-            $table->string('name');
-            $table->string('firstName');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->Enum('role', ['minister', 'super_minister'])->default('minister');
+        Schema::create('categorie_matieres', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom');
             $table->timestamps();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ministers');
+        Schema::dropIfExists('categorie_matieres');
     }
 };

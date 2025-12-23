@@ -14,9 +14,7 @@ return new class extends Migration
         Schema::create('appréciations', function (Blueprint $table) {
             $table->id();
             $table->string('commentaire');
-            // 
-            $table->date('Date');
-            $table->unsignedBigInteger('User_id');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
