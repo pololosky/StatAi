@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->float('Valeur');
+            // une autre table
             $table->string('matiere');
+            // plus besoin
             $table->date('Date');
+            // $table->foreignId('livre_id')->constrained('livres')->onDelete('cascade');
             $table->unsignedBigInteger('User_id');
             $table->timestamps();
         });

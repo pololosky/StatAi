@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('comportements', function (Blueprint $table) {
             $table->id();
             $table->string('description');
+            // meme chose
             $table->date('Date');
             $table->unsignedBigInteger('User_id');
             $table->timestamps();
