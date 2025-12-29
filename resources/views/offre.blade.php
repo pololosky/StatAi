@@ -1,4 +1,4 @@
-
+<x-layouts.app.navBar :title="$title ?? null">
 <div class="pricing-page">
     <div class="container">
         
@@ -208,3 +208,4 @@
         .card-popular { transform: scale(1); margin: 20px 0; }
     }
 </style>
+</x-layouts.app.navBar>
