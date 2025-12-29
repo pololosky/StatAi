@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->float('Valeur');
             $table->date('Date');
-            $table->unsignedBigInteger('User_id');
+            // $table->foreignId('livre_id')->constrained('livres')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id')->constrained('matusersieres')->onDelete('cascade');
             $table->foreignId('matiere_id')->constrained('matieres')->onDelete('cascade');
             $table->timestamps();
         });
