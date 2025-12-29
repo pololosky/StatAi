@@ -33,4 +33,9 @@ Route::middleware(['auth'])->group(function () {
             ),
         )
         ->name('two-factor.show');
+
+});
+
+    Route::get('/offre', function () {
+    return view('offre');
 });
