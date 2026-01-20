@@ -10,7 +10,11 @@ use Laravel\Fortify\Features;
 // les controllers
 use App\Http\Controllers\HomeController;
 
+// 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// pour afficher les offres
+Route::get('/offre', [HomeController::class, 'offre'])->name('offre');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

@@ -4,24 +4,18 @@
     @include('partials.head')
 </head>
 <body class="bg-white text-black scroll-smooth">
-    <header class="flex justify-between items-center px-32 py-4 sticky top-0 border-b-1 border-gray-200 bg-white shadow">
+    <header class="flex justify-between items-center px-32 py-4 sticky top-0 border-b-1 border-gray-200 bg-white shadow z-10">
         <div class="text-blue-600"> 
             <a href="/" class="flex gap-2 items-center">
                 <i class="ri-graduation-cap-fill text-4xl"></i>
                 <h1 class="text-4xl font-bold italic">StatAi</h1>
             </a>
         </div>
-        {{-- <nav class="flex gap-8 items-center">
-            <a href="/">
-                <p class="text-gray-500 text-lg">navList</p>
+        <nav class="flex gap-8 items-center">
+            <a href="/offre">
+                <p class="text-gray-500 text-lg">Nos Offres</p>
             </a>
-            <a href="/">
-                <p class="text-gray-500 text-lg">navList</p>
-            </a>
-            <a href="/">
-                <p class="text-gray-500 text-lg">navList</p>
-            </a>
-        </nav> --}}
+        </nav>
         @if (Route::has('login'))
             <nav class="flex items-center justify-end gap-4">
                 @auth
@@ -56,6 +50,12 @@
                     >
                         Se connecter
                     </a>
+                    {{-- <a
+                        href="{{ route('register') }}"
+                        class="flex px-5 py-1.5 shadow bg-blue-600 text-white cursor-pointer rounded-xl text-lg font-semibold"
+                    >
+                        s'inscrire
+                    </a> --}}
                     {{-- @if (Route::has('register'))
                         <a
                             href="{{ route('register') }}"

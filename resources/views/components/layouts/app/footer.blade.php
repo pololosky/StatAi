@@ -12,7 +12,7 @@
             <h1 class="text-2xl font-bold">Produit</h1>
             <div class="flex flex-col gap-2">
                 <a href="#fonctionnalites" class="text-lg text-gray-400">Fonctionalités</a>
-                <a href="" class="text-lg text-gray-400">Tarifs</a>
+                <a href="/offre" class="text-lg text-gray-400">Tarifs</a>
                 <a href="" class="text-lg text-gray-400">Pour les écoles</a>
                 <a href="" class="text-lg text-gray-400">Sécurité</a>    
             </div>   
