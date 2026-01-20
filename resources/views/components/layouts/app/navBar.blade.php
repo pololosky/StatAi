@@ -15,6 +15,9 @@
             <a href="/offre">
                 <p class="text-gray-500 text-lg">Nos Offres</p>
             </a>
+            <a href="/etablissement">
+                <p class="text-gray-500 text-lg">Etablissement</p>
+            </a>
         </nav>
         @if (Route::has('login'))
             <nav class="flex items-center justify-end gap-4">
@@ -42,6 +45,10 @@
                         >
                             Mon Profil
                         </a>
+                        <form method="POST" action="{{ route('logout') }}" class="w-full">
+                            @csrf
+                            <p>se deconnecter</p>
+                        </form>
                     @endif
                 @else
                     <a

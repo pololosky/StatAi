@@ -9,6 +9,7 @@ use Laravel\Fortify\Features;
 
 // les controllers
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EtablissementController;
 
 // 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -38,8 +39,8 @@ Route::middleware(['auth'])->group(function () {
         )
         ->name('two-factor.show');
 
-});
-
-    Route::get('/offre', function () {
-    return view('offre');
-});
+        
+    });
+    
+    // pour les etablissement
+    Route::get('/etablissement',[EtablissementController::class,'index'])->name('etablissement');
